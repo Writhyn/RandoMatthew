@@ -1,3 +1,76 @@
 #matthew {
     display: none;
 }
+
+#container {
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#displayText {
+    width: 80%;
+    text-align: center;
+    margin: 20px;
+    font-size: 150%;
+}
+
+#displayText::first-letter {
+    text-transform: uppercase;
+}
+
+#getRandom {
+    background: linear-gradient(270deg, #4ee2df, #4eb0e2);
+    background-size: 400% 400%;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 120%;
+    font-family: sans-serif;
+    cursor: pointer;
+    animation: flow 20s ease infinite;
+}
+
+@keyframes flow {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.textExit {
+    animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes tracking-out-contract {
+    0% {
+    opacity: 1;
+    }
+    50% {
+    opacity: 1;
+    }
+    100% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    }
+}
+
+.textEnter {
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    }
+    40% {
+    opacity: 0.6;
+    }
+    100% {
+    opacity: 1;
+    }
+}
