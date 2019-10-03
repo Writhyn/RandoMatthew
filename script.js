@@ -14,7 +14,7 @@ const replaceMap = {
     '” ': '”@',
     '.’ ': '.’@',
 };
-const textToSplit = text.replace(/\.|\?/g, char => replaceMap[char]);
+const textToSplit = text.replace(/\. |\? |\! |” |.’ /g, char => replaceMap[char]);
 
 // textToSplit = text.replace(/\. /g, ".@").replace(/\! /g, "!@").replace(/” /g, '”@').replace(/\.’ /g, ".’@").replace(/\? /g, "?@");
 const textArray = textToSplit.split("@");
