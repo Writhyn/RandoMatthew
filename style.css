@@ -22,7 +22,13 @@
     text-transform: uppercase;
 }
 
-#getRandom {
+#buttonWrapper {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.buttons {
     background: linear-gradient(270deg, #4ee2df, #4eb0e2);
     background-size: 400% 400%;
     color: white;
@@ -41,23 +47,6 @@
     100%{background-position:0% 50%}
 }
 
-.textExit {
-    animation: tracking-out-contract 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-@keyframes tracking-out-contract {
-    0% {
-    opacity: 1;
-    }
-    50% {
-    opacity: 1;
-    }
-    100% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-    }
-}
-
 .textEnter {
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
@@ -73,4 +62,17 @@
     100% {
     opacity: 1;
     }
+}
+
+.contextEnter {
+    overflow: hidden;
+    animation: enter 2s ease-in-out both;
+}
+
+@keyframes enter {
+    0% {opacity: 0;}
+
+    50% {opacity: 1}
+
+    100% {opacity: 0;}
 }
