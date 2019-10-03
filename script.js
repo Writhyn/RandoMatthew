@@ -7,16 +7,16 @@ let sentence = "";
 
 // Finds the ends of sentences and questions (including dialogue), and adds "@" for easy splitting.
 
-const replaceMap = {
-    '. ': '.@',
-    '? ': '?@',
-    '! ': '!@',
-    '” ': '”@',
-    '.’ ': '.’@',
-};
-const textToSplit = text.replace(/\. |\? |\! |” |.’ /g, char => replaceMap[char]);
+// const replaceMap = {
+//     '. ': '.@',
+//     '? ': '?@',
+//     '! ': '!@',
+//     '” ': '”@',
+//     '.’ ': '.’@',
+// };
+// const textToSplit = text.replace(/\. |\? |\! |” |.’ /g, char => replaceMap[char]);
 
-// textToSplit = text.replace(/\. /g, ".@").replace(/\! /g, "!@").replace(/” /g, '”@').replace(/\.’ /g, ".’@").replace(/\? /g, "?@");
+textToSplit = text.replace(/\. /g, ".@").replace(/\! /g, "!@").replace(/” /g, '”@').replace(/\.’ /g, ".’@").replace(/\? /g, "?@");
 const textArray = textToSplit.split("@");
 const limit = textArray.length;
 
