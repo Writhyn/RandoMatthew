@@ -2,6 +2,7 @@ const randButton = document.querySelector("#getRandom");
 const text = document.querySelector("#matthew").textContent;
 const displayDiv = document.querySelector("#displayText");
 const contextCheck = document.querySelector("#contextCheck");
+const greekButton = document.querySelector("#greek");
 let number = 0;
 let sentence = "";
 
@@ -44,11 +45,17 @@ function checkContext() {
     
 }
 
+function makeGreek() {
+    displayDiv.textContent = "\"Greek\"";
+}
+
 
 //Event listeners for button and keypress
 randButton.addEventListener("click", deliverRandomSentence);
 
 contextCheck.addEventListener("click", checkContext);
+
+greekButton.addEventListener("click", makeGreek);
 
 document.addEventListener("keypress", function(e) {
     if (e.which === 32) {
