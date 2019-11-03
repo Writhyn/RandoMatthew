@@ -45,17 +45,11 @@ function checkContext() {
     
 }
 
-function makeGreek() {
-    displayDiv.textContent = "\"Greek\"";
-}
-
 
 //Event listeners for button and keypress
 randButton.addEventListener("click", deliverRandomSentence);
 
 contextCheck.addEventListener("click", checkContext);
-
-greekButton.addEventListener("click", makeGreek);
 
 document.addEventListener("keypress", function(e) {
     if (e.which === 32) {
