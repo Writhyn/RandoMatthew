@@ -16,6 +16,7 @@
     text-align: center;
     margin: 20px;
     font-size: 130%;
+    color: darkslategrey;
 }
 
 #displayText::first-letter {
